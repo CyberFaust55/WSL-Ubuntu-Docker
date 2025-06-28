@@ -1,0 +1,58 @@
+
+🐧 WSL + Ubuntu + Docker – Konfiguracja systemu (CyberFaust55)
+
+DOKUMENTACJA KONFIGURACJI SYSTEMU DLA GITHUBA
+
+1. Instalacja WSL (Windows Subsystem for Linux)
+-----------------------------------------------
+- Otwórz PowerShell jako administrator:
+    wsl --install
+
+- Zainstaluj dystrybucję Ubuntu:
+    wsl --install -d Ubuntu
+
+2. Uruchomienie Ubuntu i aktualizacja systemu
+----------------------------------------------
+- Uruchom Ubuntu z menu Start
+- Utwórz użytkownika
+- Zaktualizuj system:
+    sudo apt update && sudo apt upgrade -y
+
+3. Nauka komend Basha
+----------------------
+- pwd – pokaż ścieżkę
+- ls -la – zawartość katalogu z ukrytymi plikami
+- cd /etc – przejście do katalogu
+- cat /etc/os-release – info o wersji systemu
+- clear – czyszczenie ekranu
+- exit – wyjście z powłoki
+
+4. Różnice: Bash vs PowerShell
+-------------------------------
+- Bash: tekst (np. ps aux | grep firefox)
+- PowerShell: obiekty (np. Get-Process | Where-Object { $_.CPU -gt 5 })
+
+5. Instalacja Docker Desktop
+-----------------------------
+- Instalacja z docker.com
+- Włączenie integracji z Ubuntu w ustawieniach
+- Weryfikacja:
+    docker --version
+    docker run hello-world
+
+6. Podstawowe komendy Dockera
+------------------------------
+- docker pull alpine
+- docker run -it alpine sh
+- docker run -d -p 8080:80 nginx
+- docker ps -a
+- docker stop <id>
+- docker rm <id>
+
+7. Co dalej?
+-------------
+- Dockerfile, docker-compose.yml, bind mounts, volumes
+- Lab: DVWA, OWASP Juice Shop, własne środowiska testowe
+
+Dzień: 28.06.2025
+Autor: CyberFaust55
